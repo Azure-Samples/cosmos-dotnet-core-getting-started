@@ -33,7 +33,7 @@ namespace CosmosGettingStartedDotnetCoreTutorial
                 Program p = new Program();
                 await p.GetStartedDemoAsync();
             }
-            catch (CosmosRequestException de)
+            catch (CosmosException de)
             {
                 Exception baseException = de.GetBaseException();
                 Console.WriteLine("{0} error occurred: {1}\n", de.StatusCode, de);
